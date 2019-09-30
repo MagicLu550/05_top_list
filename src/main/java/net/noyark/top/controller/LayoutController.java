@@ -13,6 +13,8 @@ public class LayoutController {
     @Autowired
     private LayoutService service;
 
+
+    //展示图片
     @RequestMapping("/show")
     public String show(HttpServletRequest request){
         return service.show(request.getServletContext());
