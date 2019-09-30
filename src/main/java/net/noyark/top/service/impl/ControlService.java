@@ -23,8 +23,8 @@ public class ControlService implements IControlService {
     public boolean login(DataUser user) {
         String salt = mapper.getSaltById(user.getId());
         noUser(user);
-        int found = mapper.searchUser(user.getName(),Util.md5Password(user.getPasswordMd5(),salt));
-        if(found == 0){
+        DataUser found = mapper.searchUser(user.getName(),Util.md5Password(user.getPasswordMd5(),salt));
+        if(found == null){
             throw new PasswordErrorException("用户名和密码错误");
         }else{
             return true;
@@ -32,14 +32,14 @@ public class ControlService implements IControlService {
     }
 
     private boolean existsUser(DataUser user){
-        if(mapper.searchUser(user.getName()) != 0){
+        if(mapper.searchUserByName(user.getName()) != null){
             throw new UserExistsException("用户已经存在");
         }
         return false;
     }
 
     private boolean noUser(DataUser user){
-        if(mapper.searchUser(user.getName()) == 0){
+        if(mapper.searchUserByName(user.getName()) == null){
             throw new UserNotFoundException("用户不存在");
         }
         return false;

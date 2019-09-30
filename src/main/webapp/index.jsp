@@ -88,6 +88,7 @@
                 //id
                 for(int id : ids){
                     DataTop top = mapper.getTop(id);
+                    if(top.getDeleted()==1)continue;
                     //栏目
             %>
             <br>
@@ -99,6 +100,7 @@
                     <%
                         List<DataImage> images = mapper.getImages(id);
                         for(DataImage image : images){
+                            if(image.getDeleted()==1)continue;
                     %>
                             <%-- 图片 --%>
                             <li><img alt="no such file" src="<%=image.getPath()%>" id="<%=image.getId()%>" style="width: 90%;"></li>

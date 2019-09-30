@@ -1,5 +1,6 @@
 package net.noyark.top.mapper;
 
+import net.noyark.top.entity.DataUser;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -28,11 +29,13 @@ public interface UploadMapper {
     String getSaltById(@Param("id")int id);
 
 
-    Integer searchUser(@Param("name") String username,@Param("password") String password);
+    DataUser searchUser(@Param("name") String username, @Param("password") String password);
 
-    Integer searchUser(@Param("name")String username);
+    DataUser searchUserByName(@Param("name")String username);
 
-    Integer modifyUser(@Param("name")String username,String password);
+    Integer modifyUser(@Param("name")String username,@Param("password") String password);
 
-    Integer addTop(String name,String description);
+    Integer addTop(@Param("name") String name,@Param("description") String description);
+
+
 }

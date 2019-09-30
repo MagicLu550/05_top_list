@@ -3,5 +3,30 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--关于上传的数据库表-->
 <mapper namespace="net.noyark.top.mapper.ViewMapper">
+    <select id="getImage" resultType="net.noyark.top.entity.DataImage" >
+        SELECT 
+            *
+        FROM 
+            images
+        WHERE id = ${id};
+    </select>
+    <select id="getImages" resultType="net.noyark.top.entity.DataImage">
+        SELECT 
+            *
+        FROM
+            images
+        WHERE tid = ${id};
+    </select>
 
+    <select id="getTopIds" resultType="java.lang.Integer">
+        SELECT
+            id
+        FROM tops;
+    </select>
+
+    <select id="getTop" resultType="net.noyark.top.entity.DataTop">
+        SELECT
+            *
+        FROM tops;
+    </select>
 </mapper>

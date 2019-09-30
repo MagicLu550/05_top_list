@@ -12,8 +12,93 @@
             ${path},
             ${tid},
             ${name},
-            ${description}
+            ${description},
             0
         );
+    </insert>
+    <update id="deleteImage">
+        UPDATE
+            images
+        SET
+            deleted = 1
+        WHERE
+            id=${id};
+    </update>
+    <update id="deleteTop">
+        UPDATE
+            tops
+        SET
+            deleted = 1
+        WHERE
+            id=${id};
+    </update>
+    <update id="deleteUser">
+        UPDATE
+            users
+        SET
+            deleted = 1
+        WHERE
+            id=${id};
+    </update>
+    <insert id="registerUser">
+        INSERT INTO
+            users
+        VALUES
+            (
+                NULL,
+                ${password},
+                ${salt},
+                ${username},
+                ${username},
+                0
+            )
+    </insert>
+    <select id="getSaltById" resultType="java.lang.String">
+        SELECT
+            salt
+        FROM
+            users
+        WHERE
+            id = ${id};
+    </select>
+
+    <select id="searchUser">
+        SELECT
+            *
+        FROM
+            users
+        WHERE
+            name = ${name}
+        AND
+            password = ${password};
+    </select>
+
+    <select id="searchUserByName">
+        SELECT
+            *
+        FROM
+            users
+        WHERE
+            name = ${name};
+    </select>
+
+    <update id="modifyUser">
+        UPDATE
+            users
+        SET
+            password = ${password}
+        WHERE
+            name = ${name}
+    </update>
+
+    <insert id="addTop">
+        INSERT
+            tops
+        VALUES
+            (
+                NULL,
+                ${name},
+                ${description}
+            )
     </insert>
 </mapper>
