@@ -8,34 +8,12 @@
         INTO
             images
         VALUES(
+            NULL,
             ${path},
             ${tid},
             ${name},
             ${description}
+            0
         );
-    </insert>
-    <delete id="deleteImage">
-        DELETE
-        FROM
-            images
-        WHERE
-            id = ${id};
-    </delete>
-    <delete id="deleteTop">
-        DELETE
-        FROM
-            tops
-        WHERE
-            id = ${id};
-    </delete>
-    <delete id="deleteUser">
-        DELETE
-        FROM
-            users
-        WHERE
-            id = ${id};
-    </delete>
-    <insert id="registerUser">
-
     </insert>
 </mapper>
