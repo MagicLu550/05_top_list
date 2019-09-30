@@ -79,6 +79,8 @@
     </header>
     <!-- 正文部分 -->
     <article>
+        <button class=".goLeft">左移动</button>
+        <button class=".goRight">右移动</button>
         <div class="warps">
             <%
                 ViewMapper mapper = (ViewMapper) application.getAttribute("mapper");
