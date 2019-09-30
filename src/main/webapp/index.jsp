@@ -68,41 +68,7 @@
         });
     </script>
     <style type="text/css">
-        *{
-            padding: 0;
-            margin: 0;
-        }
-
-        li{
-            list-style-type: none;
-            margin-top: 40px;
-        }
-
-        body{
-            margin: 20px;
-        }
-
-        .wraps div{
-            border: 3px solid #f00;
-            width: 600px;
-            height: 200px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .wraps div ul{
-            overflow: hidden;
-            position:absolute;
-            width: 1600px;
-            left: 0;
-            top: 0;
-            _height:1px;
-        }
-
-        .wraps div ul li{
-            float: left;
-            width: 200px;
-        }
+        @import "index.css";
     </style>
 
 </head>

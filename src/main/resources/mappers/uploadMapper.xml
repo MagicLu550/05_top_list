@@ -3,4 +3,39 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--关于上传的数据库表-->
 <mapper namespace="net.noyark.top.mapper.UploadMapper">
+    <insert id="insertImage">
+        INSERT
+        INTO
+            images
+        VALUES(
+            ${path},
+            ${tid},
+            ${name},
+            ${description}
+        );
+    </insert>
+    <delete id="deleteImage">
+        DELETE
+        FROM
+            images
+        WHERE
+            id = ${id};
+    </delete>
+    <delete id="deleteTop">
+        DELETE
+        FROM
+            tops
+        WHERE
+            id = ${id};
+    </delete>
+    <delete id="deleteUser">
+        DELETE
+        FROM
+            users
+        WHERE
+            id = ${id};
+    </delete>
+    <insert id="registerUser">
+
+    </insert>
 </mapper>

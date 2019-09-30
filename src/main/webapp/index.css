@@ -12,7 +12,7 @@ body{
     margin: 20px;
 }
 
-.wrap{
+.wraps div{
     border: 3px solid #f00;
     width: 600px;
     height: 200px;
@@ -20,7 +20,7 @@ body{
     overflow: hidden;
 }
 
-.wrap ul{
+.wraps div ul{
     overflow: hidden;
     position:absolute;
     width: 1600px;
@@ -29,7 +29,7 @@ body{
     _height:1px;
 }
 
-.wrap ul li{
+.wraps div ul li{
     float: left;
     width: 200px;
 }
