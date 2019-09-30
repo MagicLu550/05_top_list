@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver #数据库驱动
+    url: jdbc:mysql://localhost:3306/top_list #数据库url
+    username: root #账号
+    password: 85027859yhn #密码
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+  type-aliases-package: net.noyark.top.mapper
+  mapper-locations: classpath:mappers/*.xml
