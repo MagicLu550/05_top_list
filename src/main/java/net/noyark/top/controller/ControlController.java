@@ -1,5 +1,7 @@
 package net.noyark.top.controller;
 
+import net.noyark.top.service.interf.IControlService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -9,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 //-- 点击top进入image表
 @Controller
 public class ControlController {
+
+    @Autowired
+    private IControlService service;
     //进入manager界面 首先登陆
     //登陆后进入面板区，做的简陋些
     //两个按钮 一个进入数据区 一个推出
@@ -23,4 +28,8 @@ public class ControlController {
     public String showIndex(){
         return "login.jsp";
     }
+
+    //后台登陆 + 后台一系列设置
+    //还有存储图片的文件夹
+
 }

@@ -5,6 +5,8 @@ package net.noyark.top.entity;
 //        salt text,
 public class DataUser extends BaseEntity {
 
+
+
     private String salt;
 
     private String passwordMd5;

@@ -79,6 +79,43 @@
     </header>
     <!-- 正文部分 -->
     <article>
+
+        <div class="warps">
+            <a href="javascript:" class="goLeft">向左走</a> <a href="javascript:" class="goRight">向右走</a>
+            <div class="wrap">
+                <ul>
+                    <li>
+                        <p>a</p>
+                        <img src="test/1.jpg" alt="" style="width:90%;">
+                    </li>
+                    <li>
+                        <p>b</p>
+                        <img src="test/2.jpeg" alt="" style="width:90%;">
+
+                    </li>
+                    <li>
+                        <p>c</p>
+                        <img src="test/3.jpg" alt="" style="width:90%;">
+                    </li>
+                </ul>
+            </div>
+            <p>hello</p>
+            <div class="wrap">
+                <ul>
+                    <li>
+                        <img src="test/1.jpg" alt="" style="width:90%;">
+                        <p>a</p>
+                    </li>
+                    <li><img src="test/2.jpeg" alt="" style="width:90%;">
+                        <p>b</p>
+                    </li>
+                    <li>
+                        <img src="test/3.jpg" alt="" style="width:90%;">
+                        <p>c</p>
+                    </li>
+                </ul>
+            </div>
+
             <%
                 ViewMapper mapper = (ViewMapper) application.getAttribute("mapper");
                 List<Integer> ids = mapper.getTopIds();
@@ -114,6 +151,7 @@
             %>
 
             <!-- 此时这里要循环写图片和内容 -->
+        </div>
 
     </article>
     <!-- 脚步的部分 -->

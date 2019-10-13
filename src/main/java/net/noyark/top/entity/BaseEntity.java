@@ -2,6 +2,8 @@ package net.noyark.top.entity;
 
 public abstract class BaseEntity {
 
+
+
     private int id;
 
     private String name;

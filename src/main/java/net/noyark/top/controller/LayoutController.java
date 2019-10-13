@@ -1,6 +1,7 @@
 package net.noyark.top.controller;
 
-import net.noyark.top.service.impl.LayoutService;
+
+import net.noyark.top.service.interf.ILayoutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 public class LayoutController {
 
     @Autowired
-    private LayoutService service;
+    private ILayoutService service;
 
 
     //展示图片
